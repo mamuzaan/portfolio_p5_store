@@ -9,3 +9,73 @@ body {
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+/* from bootstrap Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.4rem;
+    width: 1.4rem;
+}
+
+.logo-font {
+    text-transform: uppercase;;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.shop-now-button {
+    background: black;
+    color: aliceblue;
+    min-width: 260px;
+}
+
+.btn-black {
+    background: black;
+    color: whitesmoke;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: black;
+    color: white;
+}
+
+.text-black {
+    color: black !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+/* ------------------ Media Queries ----------------- */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px){
+    .container {
+        max-width: 80%;
+    }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1025;
+    }
+
+    .header-container {
+        padding-top: 165px;
+    }
+}
