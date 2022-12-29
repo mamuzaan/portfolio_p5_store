@@ -1,0 +1,11 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: url('media/young-woman-shop-buying-clothes-17927682.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 165px);
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
