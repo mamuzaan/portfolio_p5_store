@@ -28,7 +28,7 @@
     {% block extra_js %}
     {% endblock %}
 
-    <title>Mahir Store {% block %}</title>
+    <title>Mahir Store {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
     <header class="container-fluid fixed-top">
@@ -49,6 +49,6 @@
 
     {% block postloadjs %}
     {% endblock %}
-    
+
   </body>
 </html>
