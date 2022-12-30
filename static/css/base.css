@@ -3,11 +3,9 @@ html {
 }
 
 body {
-    background: url('media/young-woman-shop-buying-clothes-17927682.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 165px);
+    background: rgb(212, 166, 235);
     color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Roboto';
 }
 
 /* from bootstrap Bulma */
