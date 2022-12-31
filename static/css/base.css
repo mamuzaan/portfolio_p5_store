@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: rgb(212, 166, 235);
+    background: rgb(208, 146, 224);
     color: black;
     font-family: 'Roboto';
 }
@@ -52,6 +52,10 @@ body {
 
 .border-black {
     border: 1px solid black !important;
+}
+
+.bg-black {
+    background: #000 !important;
 }
 
 /* ------------------ Media Queries ----------------- */
