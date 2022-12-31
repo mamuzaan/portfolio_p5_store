@@ -1,0 +1,98 @@
+[
+    {
+      "pk": 1,
+      "model": "products.category",
+      "fields": {
+        "name": "punjabi",
+        "friendly_name": "Punjabi"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "products.category",
+      "fields": {
+        "name": "jeans",
+        "friendly_name": "Jeans"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "products.category",
+      "fields": {
+        "name": "shirts",
+        "friendly_name": "Shirts"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "products.category",
+      "fields": {
+        "name": "socks",
+        "friendly_name": "Socks"
+      }
+    },
+    {
+      "pk": 5,
+      "model": "products.category",
+      "fields": {
+        "name": "dress",
+        "friendly_name": "Dress"
+      }
+    },
+    {
+      "pk": 6,
+      "model": "products.category",
+      "fields": {
+        "name": "top",
+        "friendly_name": "Top"
+      }
+    },
+    {
+      "pk": 7,
+      "model": "products.category",
+      "fields": {
+        "name": "pants",
+        "friendly_name": "Pants"
+      }
+    },
+    {
+      "pk": 8,
+      "model": "products.category",
+      "fields": {
+        "name": "new_arrivals",
+        "friendly_name": "New Arrivals"
+      }
+    },
+    {
+      "pk": 9,
+      "model": "products.category",
+      "fields": {
+        "name": "deals",
+        "friendly_name": "Deals"
+      }
+    },
+    {
+        "pk": 10,
+        "model": "products.category",
+        "fields": {
+          "name": "boys",
+          "friendly_name": "Boys"
+        }
+      },
+      {
+        "pk": 11,
+        "model": "products.category",
+        "fields": {
+          "name": "girls",
+          "friendly_name": "Girls"
+        }
+      },
+      {
+        "pk": 12,
+        "model": "products.category",
+        "fields": {
+          "name": "baby",
+          "friendly_name": "Baby"
+        }
+      }
+  ]
