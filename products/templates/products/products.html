@@ -10,10 +10,28 @@
 {% endblock %}
 
 {% block content %}
-<div class="container header-container">
+<div class="overlay"></div>
+<div class="container-fluid">
     <div class="row">
-        <div class="col">
-            {{ products }}
+        <div class="col text-center mt-3">
+            <h2 class="logo-font">
+                Products
+            </h2>
+            <hr class="w-50 mb-1">
+        </div>
+    </div>
+    <div class="row">
+        <div class="product-container col-10 offset-1">
+            <div class="row mt-1 mb-2"></div>
+            <div class="row">
+                {% for product in products %}
+                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="card h-100 border-0">
+                            
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>
