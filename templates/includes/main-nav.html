@@ -17,11 +17,11 @@
                 Men
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Punjabi</a>
-                <a href="" class="dropdown-item">Jeans</a>
-                <a href="" class="dropdown-item">Shirts</a>
-                <a href="" class="dropdown-item">Socks</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Men Clothing</a>
+                <a href="{% url 'products' %}?category=punjabi" class="dropdown-item">Punjabi</a>
+                <a href="{% url 'products' %}?category=jeans" class="dropdown-item">Jeans</a>
+                <a href="{% url 'products' %}?category=shirts" class="dropdown-item">Shirts</a>
+                <a href="{% url 'products' %}?category=socks" class="dropdown-item">Socks</a>
+                <a href="{% url 'products' %}?category=punjabi,jeans,shirts,socks" class="dropdown-item">All Men Clothing</a>
             </div>
         </li>
 
