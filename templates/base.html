@@ -116,12 +116,12 @@
     {% if messages %}
         <div class="message-container">
             {% for message in messages %}
-                {% with message.lebel as lebel %}
-                    {% if lebel == 40 %}
+                {% with message.level as level %}
+                    {% if level == 40 %}
                         {% include 'includes/toasts/toast_error.html' %}
-                    {% elif lebel == 30 %}
+                    {% elif level == 30 %}
                         {% include 'includes/toasts/toast_warning.html' %}
-                    {% elif lebel == 25 %}
+                    {% elif level == 25 %}
                         {% include 'includes/toasts/toast_success.html' %}
                     {% else %}
                         {% include 'includes/toasts/toast_info.html' %}
@@ -130,7 +130,7 @@
             {% endfor %}
         </div>
     {% endif %}
-
+    
     {% block page_header %}
     {% endblock %}
     
