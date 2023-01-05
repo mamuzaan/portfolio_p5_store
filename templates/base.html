@@ -116,7 +116,17 @@
     {% if messages %}
         <div class="message-container">
             {% for message in messages %}
-                {% include 'includes/toasts/toast_success.html' %}
+                {% with message.lebel as lebel %}
+                    {% if lebel == 40 %}
+                        {% include 'includes/toasts/toast_error.html' %}
+                    {% elif lebel == 30 %}
+                        {% include 'includes/toasts/toast_warning.html' %}
+                    {% elif lebel == 25 %}
+                        {% include 'includes/toasts/toast_success.html' %}
+                    {% else %}
+                        {% include 'includes/toasts/toast_info.html' %}
+                    {% endif %}
+                {% endwith %}
             {% endfor %}
         </div>
     {% endif %}
@@ -128,6 +138,9 @@
     {% endblock %}
 
     {% block postloadjs %}
+    <script type="text/javascript">
+        $('.toast').toast('show');
+    </script>
     {% endblock %}
 
   </body>
