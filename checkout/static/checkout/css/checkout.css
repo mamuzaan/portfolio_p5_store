@@ -43,7 +43,7 @@ select option {
 
 select:invalid,
 select option[value=""] {
-  color: grey !important;
+  color: #99a1a9 !important;
 }
 
 #loading-overlay {
