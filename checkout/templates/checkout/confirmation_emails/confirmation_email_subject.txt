@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 Mahir Store Confirmation for Order Number {{ order.order_number }}
+=======
+Mahir Store Corfirmation for Order Number {{ order.order_number }}
+>>>>>>> ea7d1b66af6f3492655d3de08521bfe4199df393

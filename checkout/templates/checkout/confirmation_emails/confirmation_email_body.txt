@@ -1,12 +1,20 @@
 Hello {{ order.full_name }}!
 
+<<<<<<< HEAD
 This is a confirmation of your order at Mahir store. Your order information is below:
+=======
+This is a confirmation of your order at Mahir Store. Your order information is below.
+>>>>>>> ea7d1b66af6f3492655d3de08521bfe4199df393
 
 Order Number: {{ order.order_number }}
 Order Date: {{ order.date }}
 
 Order Total: ${{ order.order_total }}
+<<<<<<< HEAD
 Delivery: ${{ order.delivery_cost }}
+=======
+Delivery: ${{ order.delivery_colt }}
+>>>>>>> ea7d1b66af6f3492655d3de08521bfe4199df393
 Grand Total: ${{ order.grand_total }}
 
 Your order will be shipped to {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.country }}.
