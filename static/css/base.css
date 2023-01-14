@@ -232,6 +232,22 @@ input[name='q']::placeholder {
 	color: #17a2b8; /* text-info */
 }
 
+/* Product Form */
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
