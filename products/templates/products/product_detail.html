@@ -109,6 +109,51 @@
 </div>
 {% endblock %}
 
+{% block page_footer %}
+<footer class="footer mt-auto">
+  <div class="jumbotron jumbotron-fluid bg-dark mt-3 mb-0">
+      <div class="container">
+          <div class="row">
+              <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 cizgi">
+                  <div class="card bg-dark border-0">
+                      <div class="card-body text-light text-left">
+                          <h5 class="card-title text-white display-4" style="font-size:30px">Contact Us</h5>
+                          <a href="{% url 'home' %}" class="text-light d-block lead">Mahir Store</a>
+                          <a class="text-light d-block lead" style="margin-left: -20px" href="#"><i class="fa fa-phone mr-2"></i>+46 070 000 000</a>
+                          <a class="text-light d-block lead" href="#"><i class="fa fa-envelope mr-2"></i>mahirstore@example.com</a>
+                          <h6>Openning Hour</h6>
+                          <p>Mon-Fri(10:00 - 19:00) Sat(11:00 - 15:00)</p>
+                          <p>Sun Close</p>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cizgi">
+                  <div class="card bg-dark border-0">
+                      <div class="card-body text-light text-left">
+                          <h5 class="card-title text-white display-4" style="font-size:30px">Policy</h5>
+                          
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                  <div class="card bg-dark border-0">
+                      <div class="card-body text-light text-left">
+                      <h5 class="card-title text-white display-4 lead" style="font-size:30px">Follow Us</h5>
+                              <a href="#"><i class="fab fa-facebook-square fa-fw fa-2x text-light"></i></a>
+                              <a href="#"><i class="fab fa-twitter-square fa-fw fa-2x text-light"></i></a>
+                              <a href="#"><i class="fab fa-instagram-square fa-fw fa-2x text-light"></i></a>
+                              <a href="#"><i class="fab fa-youtube-square fa-fw fa-2x text-light"></i></a>
+                      </div>
+                  </div>
+              </div>	
+          </div>
+      </div>
+  </div>
+</footer>
+{% endblock %}
+
 {% block postloadjs %}
     {{ block.super }}
     {% include 'products/includes/quantity_input_script.html' %}
