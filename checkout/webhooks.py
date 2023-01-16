@@ -31,6 +31,8 @@ def webhook(request):
         # Invalid signature
         return HttpResponse(status=400)
     except Exception as e:
+        print(f"ERROR {str(e)}")
+        raise e
         return HttpResponse(content=e, status=400)
 
     # Set up a webhook handler
