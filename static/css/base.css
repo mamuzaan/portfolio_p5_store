@@ -259,6 +259,15 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+footer a.text-light:hover {
+    color: #fed136!important;
+    
+}
+
+footer .cizgi {
+    border-right: 1px solid #535e67;
+}
+
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
