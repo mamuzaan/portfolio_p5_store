@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: rgb(208, 146, 224);
+    background: rgb(182, 131, 191);
     color: black;
     font-family: 'Roboto';
 }
@@ -384,15 +384,15 @@ h2 {
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 768px) {
     .header-container {
-        padding-top: 116px;
+        padding-top: 75px;
     }
 
     body {
-        height: calc(100vh - 116px);
+        height: calc(100vh - 75px);
     }
 
     .display-7.logo-font.text-black {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .nav-link {
@@ -427,12 +427,7 @@ h2 {
         padding: .25rem .5rem !important;
     }
 
-    .carousel {
-        padding: 1rem;
+    .footer {
+        position: fixed;
     }
-}
-
-/* For small screen size from 480px and down */
-@media screen and (max-width: 480px){
-    
 }
