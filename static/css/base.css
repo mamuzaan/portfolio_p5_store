@@ -382,7 +382,7 @@ h2 {
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
-@media (max-width: 991px) {
+@media (max-width: 768px) {
     .header-container {
         padding-top: 116px;
     }
@@ -430,4 +430,9 @@ h2 {
     .carousel {
         padding: 1rem;
     }
+}
+
+/* For small screen size from 480px and down */
+@media screen and (max-width: 480px){
+    
 }
