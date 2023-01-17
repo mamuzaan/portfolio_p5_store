@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import (
+    render, redirect, reverse, get_object_or_404, HttpResponse)
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -55,6 +56,7 @@ def checkout(request):
             order.stripe_pid = pid
             order.original_bag = json.dumps(bag)
             order.save()
+
             for item_id, item_data in bag.items():
                 try:
                     product = Product.objects.get(id=item_id)

@@ -10,15 +10,15 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
+    <div class="container h-100 pt-lg-5 pb-lg-7">
         <div class="row h-100">
             <div class="col-12 col-md-4 my-auto">
-                <h2 class="display-7 logo-font text-black">Find something memorable. Ready to start shopping online?</h2><br>
+                <h2 class="logo-font text-black">Find something memorable. Ready to start shopping?</h2><br>
                 <h4>
                     <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop Now</a>
                 </h4>
             </div>
-            <div class="col-12 col-md-8 my-auto">
+            <div class="col-12 col-md-8 pt-3 my-auto">
                 <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                       <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -27,21 +27,21 @@
                     </ol>
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img src="media/young-woman-shop-buying-clothes-17927682.jpg" class="d-block w-100" alt="shopping with card" width="400" height="500">
+                        <img src="media/young-woman-shop-buying-clothes-17927682.jpg" class="d-block w-100" alt="shopping with card" width="200" height="300">
                         <div class="carousel-caption d-none d-md-block">
                           <h5>First slide label</h5>
                           <p>Young women buying clothes</p>
                         </div>
                       </div>
                       <div class="carousel-item">
-                        <img src="media/shopping-shannon-springs-2.jpg" class="d-block w-100" alt="Shopping" width="400" height="500">
+                        <img src="media/shopping-shannon-springs-2.jpg" class="d-block w-100" alt="Shopping" width="200" height="300">
                         <div class="carousel-caption d-none d-md-block">
                           <h5>Second slide label</h5>
                           <p>Buy special clothes</p>
                         </div>
                       </div>
                       <div class="carousel-item">
-                        <img src="media/88787372-traditional-indian-woman-holding-shopping-bags-against-white.webp" class="d-block w-100" alt="Indian women shopping" width="400" height="500">
+                        <img src="media/88787372-traditional-indian-woman-holding-shopping-bags-against-white.webp" class="d-block w-100" alt="Indian women shopping" width="200" height="300">
                         <div class="carousel-caption d-none d-md-block">
                           <h5>Third slide label</h5>
                           <p>Traditional indian woman holding shopping bags.</p>
@@ -60,46 +60,4 @@
             </div>
         </div>
     </div>
-{% endblock %}
-
-{% block page_footer %}
-<footer class="footer bottom">
-  <div class="jumbotron jumbotron-fluid bg-dark mb-0 p-0">
-      <div class="container">
-          <div class="row">
-              <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 cizgi">
-                  <div class="card bg-dark border-0">
-                      <div class="card-body text-light text-left">
-                          <h5 class="card-title text-white display-4" style="font-size:30px">Contact Us</h5>
-                          <a href="{% url 'home' %}" class="text-light d-block lead">Mahir Store</a>
-                          <a class="text-light d-block lead" style="margin-left: -20px" href="#"><i class="fa fa-phone mr-2"></i>+46 070 000 000</a>
-                          <a class="text-light d-block lead" href="#"><i class="fa fa-envelope mr-2"></i>mahirstore@example.com</a>
-                          <h6>Openning Hour</h6>
-                          <p>Mon-Fri(10:00 - 19:00) Sat(11:00 - 15:00)</p>
-                      </div>
-                  </div>
-              </div>
-              
-              <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 cizgi">
-                  <div class="card bg-dark border-0">
-                      <div class="card-body text-light text-left">
-                          <h5 class="card-title text-white display-4" style="font-size:30px">Policy</h5>
-                          
-                      </div>
-                  </div>
-              </div>
-              
-              <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                  <div class="card bg-dark border-0">
-                      <div class="card-body text-light text-left">
-                      <h5 class="card-title text-white display-4 lead" style="font-size:30px">Follow Us</h5>
-                              <a href="#"><i class="fab fa-facebook-square fa-fw fa-2x text-light"></i></a>
-                              <a href="#"><i class="fab fa-instagram-square fa-fw fa-2x text-light"></i></a>
-                      </div>
-                  </div>
-              </div>	
-          </div>
-      </div>
-  </div>
-</footer>
 {% endblock %}
