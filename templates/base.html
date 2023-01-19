@@ -19,6 +19,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto&display=swap">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
     {% endblock %}
 
     {% block extra_css %}
@@ -31,6 +32,11 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
         <!-- Stripe -->
         <script src="https://js.stripe.com/v3/"></script>
+        <!-- Mailchimp -->
+        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+        <script type='text/javascript'>
+            (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);
+        </script>
     {% endblock %}
 
     {% block extra_js %}
@@ -109,7 +115,7 @@
             </nav>
         </div>
         <div id="delivery-banner" class="row text-center">
-            <div class="col bg-black text-white">
+            <div class="col bg-info text-white">
                 <h4 class="logo-font my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>
             </div>
         </div>
@@ -142,79 +148,72 @@
     </main>
 
     <footer class="mainfooter fixed-buttom">
-        <div class="footer-middle text-center">  
-            <div class="container-fluid">  
+        <div class="footer-middle">  
+            <div class="container">  
                 <div class="row">  
-                    <div class="col-md-3 col-sm-6">  
-                        <div class="footer-pad">  
-                            <h4> Contact Us</h4>  
-                            <ul class="list-unstyled">  
-                            <li> Balder 36, Marta </li>  
-                            <li> Phone: 004600000</li>  
-                            <li> E-post: mamuzaan@gmail.com</li>   
-                            </ul>  
+                    <div class="col-md-4 col-sm-6">  
+                        <div class="footer-pad">
+                            <h3>Mahir // Store</h3>
+                            <p>Mahir Store is global fashion companies. company offers inspiring
+                                and affordable fashion and the range includes several different concepts in men's, women's,
+                                children's. Mahir Store's higher purpose is to empower and inspire
+                                special and Mahir Store's sustainability promise is to make a difference for future
+                                generations by empowering all, respecting the planet and standing up for human rights.
+                            </p>
                         </div>  
-                    </div>  
-                    <div class="col-md-3 col-sm-6">  
-                    <div class="footer-pad">  
-                        <h4> Policy</h4>  
-                        <ul class="list-unstyled">  
-                        <li> <a href="#"> Parks and Recreation </a> </li>  
-                        <li> <a href="#"> Public Works </a> </li>    
-                        </ul>  
-                    </div>  
-                    </div>  
-                    <div class="col-md-3 col-sm-6">  
+                    </div>   
+                    <div class="col-md-4 col-sm-6">  
                         <div class="footer-pad">  
                             <!-- Begin Mailchimp Signup Form -->
-                            <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
-                            <style type="text/css">
-                                #mc_embed_signup{background:black; clear:left; font:14px Helvetica,Arial,sans-serif;  width:350px;}
-                                /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-                                We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-                            </style>
                             <div id="mc_embed_signup">
                                 <form action="https://herokuapp.us8.list-manage.com/subscribe/post?u=801520969853e691b833eda60&amp;id=f37b3517a8&amp;f_id=00fe68e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                                     <div id="mc_embed_signup_scroll">
-                                    <h2>Newsletter</h2>
-                                    <p>Subscribe to get the latest from Mahir Store.</p>
-                            <div class="mc-field-group">
+                                    <h4>Newsletter</h4>
+                                    <p>Subscribe to get the latest from Mahir Store.</p>  
+                            <div class="mc-field-group text-center">
                                 <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
                             </label>
                                 <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
-                                <!--<span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>-->
+                                <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
                             </div>
-                                <div id="mce-responses" class="clear foot">
-                                    <div class="response" id="mce-error-response" style="display:none"></div>
-                                    <div class="response" id="mce-success-response" style="display:none"></div>
-                                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_801520969853e691b833eda60_f37b3517a8" tabindex="-1" value=""></div>
-                                    <div class="optionalParent">
-                                        <div class="clear foot">
-                                            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-                                            <!-- <p class="brandingLogo"><a href="http://eepurl.com/iiHapD" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p> -->
-                                        </div>
+                            <div id="mce-responses" class="clear foot">
+                                <div class="response" id="mce-error-response" style="display:none"></div>
+                                <div class="response" id="mce-success-response" style="display:none"></div>
+                            </div>
+                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_801520969853e691b833eda60_f37b3517a8" tabindex="-1" value=""></div>
+                                <div class="optionalParent">
+                                    <div class="clear foot">
+                                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button bg-success">
+                                        <!-- <p class="brandingLogo"><a href="http://eepurl.com/iiHapD" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p> -->
                                     </div>
                                 </div>
+                            </div>
                             </form>
                             </div>
-                            <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
                             <!--End mc_embed_signup-->
                         </div>  
-                    </div>  
-                <div class="col-md-3">  
-                    <h4> Follow Us </h4>  
-                    <ul class="social-network social-circle">  
-                    <li>*** <a href="https://www.facebook.com/Mahir-Store-100943332909290" target="_blank" class="icoFacebook" title="Facebook"> <i class="fa fa-facebook"> </i> </a> ***</li>  
-                    </ul>               
+                    </div> 
+                    <div class="col-md-4 col-sm-6">  
+                        <div class="footer-pad">  
+                            <h3> Policy</h3>  
+                            <ul class="list-unstyled">  
+                            <li> <a href="#"> Parks and Recreation </a> </li>  
+                            <li> <a href="#"> Public Works </a> </li>    
+                            </ul><br>
+                            <h3> Follow Us </h3>
+                            <ul class="social-network social-circle">  
+                                <li><a href="https://www.facebook.com/Mahir-Store-100943332909290" target="_blank" class="icoFacebook" title="Facebook"> <i class="fa fa-facebook"></i> </a></li>  
+                            </ul>
+                        </div>  
+                    </div> 
                 </div>  
-                </div>  
-            <div class="row">  
-            <div class="col-md-12 copy">  
-            <p class="text-center"> Mahir // Store. | Secure Payment System |  60 day right of return </p>  
-            </div>  
-            </div>  
-            </div>  
+            </div>
+            <div id="delivery-banner" class="row text-center">
+                <div class="col bg-secondary text-white">
+                    <p class="logo-font my-1">Mahir Store | Secure Payment System |  60 day right of return!</p>
+                </div>
+            </div>
         </div>  
       </footer> 
 
@@ -222,7 +221,8 @@
     <script type="text/javascript">
         $('.toast').toast('show');
     </script>
+     <script src="{% static 'js/script.js' %}"></script>
     {% endblock %}
-    <script src="{% static 'js/script.js' %}"></script>
+   
   </body>
 </html>

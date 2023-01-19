@@ -212,16 +212,10 @@ h2 {
     .social-network a.icoFacebook:hover {  
       background-color: #3B5998;  
     }  
-    .social-network a.icoInstagram:hover {  
-      background-color: #007bb7;  
-    }  
     .social-network a.icoFacebook:hover i  
     {  
       color: #fff;  
     }   
-    .social-network a.socialIcon:hover {  
-      color: #44BCDD;  
-    }  
     .socialHoverClass {  
       color: #44BCDD;  
     }  
@@ -275,7 +269,14 @@ h2 {
     }  
     .social-network a {  
       background-color: #F9F9F9;  
-    }  
+    }
+
+/* ------------------- Mailchimp -------------------- */
+#mc_embed_signup {
+    background:black;
+    clear:left;
+    font:14px Helvetica,Arial,sans-serif; 
+    width:350px;}
 
 /* ------------------ Media Queries ----------------- */
 
@@ -430,4 +431,14 @@ h2 {
     .footer {
         position: fixed;
     }
+
+    .footer-pad {
+        text-align: center;
+    }
+
+    #mc_embed_signup {
+        background:black;
+        clear:left;
+        font:14px Helvetica,Arial,sans-serif; 
+        width:250px;}
 }
