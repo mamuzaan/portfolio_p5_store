@@ -1,228 +1,280 @@
 {% load static %}
-
 <!doctype html>
 <html lang="en">
   <head>
-    
     {% block meta %}
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% endblock %}
-
     {% block extra_meta %}
     {% endblock %}
-
     {% block corecss %}
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto&display=swap">
-        <link rel="stylesheet" href="{% static 'css/base.css' %}">
-        <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto&display=swap">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
     {% endblock %}
-
     {% block extra_css %}
     {% endblock %}
-
     {% block corejs %}
-        <script src="https://kit.fontawesome.com/dd28319c58.js" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-        <!-- Stripe -->
-        <script src="https://js.stripe.com/v3/"></script>
-        <!-- Mailchimp -->
-        <script src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-        <script>
-            (function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);
-        </script>
-        <script src="{% static 'js/script.js' %}"></script>
+    <script src="https://kit.fontawesome.com/dd28319c58.js" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
+    </script>
+    <!-- Stripe -->
+    <script src="https://js.stripe.com/v3/">
+    </script>
+    <!-- Mailchimp -->
+    <script src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'>
+    </script>
+    <script>
+      (function($) {
+        window.fnames = new Array();
+        window.ftypes = new Array();
+        fnames[0]='EMAIL';
+        ftypes[0]='email';
+        fnames[1]='FNAME';
+        ftypes[1]='text';
+        fnames[2]='LNAME';
+        ftypes[2]='text';
+        fnames[3]='ADDRESS';
+        ftypes[3]='address';
+        fnames[4]='PHONE';
+        ftypes[4]='phone';
+        fnames[5]='BIRTHDAY';
+        ftypes[5]='birthday';
+      }
+       (jQuery));
+      var $mcj = jQuery.noConflict(true);
+    </script>
+    <script src="{% static 'js/script.js' %}">
+    </script>
     {% endblock %}
-
     {% block extra_js %}
     {% endblock %}
-
-    <title>Mahir Store {% block extra_title %}{% endblock %}</title>
+    <title>Mahir Store {% block extra_title %}{% endblock %}
+    </title>
   </head>
   <body>
     <header class="container-fluid fixed-top">
-        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-3 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="ligo-font text-black my-0"><strong><em>Mahir</em></strong> // Store</h2>
-                </a>
-            </div>
-            <div class="col-12 col-lg-6 my-auto py-1 py-lg-0">
-                <form method="GET" action="{% url 'products' %}">
-                    <div class="input-group w-100">
-                        <input class="form-control border border-black rounded-1" type="text" name="q" placeholder="Search product our site">
-                        <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounder-1" type="submit">
-                                <span class="icon">
-                                    <i class="fas fa-search"></i>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-12 col-lg-3 my-auto py-1 py-lg-0">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
-                    <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i> </div>
-                                <p class="my-0">My Account</p>
-                            </div>
-                        </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                            {% if request.user.is_authenticated %}
-                                {% if request.user.is_superuser %}
-                                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                                {% endif %}
-                                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                            {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                            {% endif %}
-                        </div>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
-                            <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                <p class="my-0">
-                                    {% if grand_total %}
-                                        ${{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                        $0.00
-                                    {% endif %}
-                                </p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+      <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
+        <div class="col-12 col-lg-3 my-auto py-1 py-lg-0 text-center text-lg-left">
+          <a href="{% url 'home' %}" class="nav-link main-logo-link">
+            <h2 class="ligo-font text-black my-0">
+              <strong>
+                <em>Mahir
+                </em>
+              </strong> // Store
+            </h2>
+          </a>
         </div>
-        <div class="row bg-white">
-            <nav class="navbar navbar-expand-lg navbar-light w-100">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+        <div class="col-12 col-lg-6 my-auto py-1 py-lg-0">
+          <form method="GET" action="{% url 'products' %}">
+            <div class="input-group w-100">
+              <input class="form-control border border-black rounded-1" type="text" name="q" placeholder="Search product our site">
+              <div class="input-group-append">
+                <button class="form-control btn btn-black border border-black rounder-1" type="submit">
+                  <span class="icon">
+                    <i class="fas fa-search">
+                    </i>
+                  </span>
                 </button>
-                {% include 'includes/mobile-top-header.html' %}
-                {% include 'includes/main-nav.html' %}
-            </nav>
-        </div>
-        <div id="delivery-banner" class="row text-center">
-            <div class="col bg-info text-white">
-                <h4 class="logo-font my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>
+              </div>
             </div>
+          </form>
         </div>
-    </header>
-
-    {% if messages %}
-        <div class="message-container" id="msgall">
-            {% for message in messages %}
-                {% with message.level as level %}
-                    {% if level == 40 %}
-                        {% include 'includes/toasts/toast_error.html' %}
-                    {% elif level == 30 %}
-                        {% include 'includes/toasts/toast_warning.html' %}
-                    {% elif level == 25 %}
-                        {% include 'includes/toasts/toast_success.html' %}
+        <div class="col-12 col-lg-3 my-auto py-1 py-lg-0">
+          <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+            <li class="list-inline-item dropdown">
+              <a class="text-black nav-link" href="#" id="user-optionss" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div class="text-center">
+                  <div>
+                    <i class="fas fa-user fa-lg">
+                    </i> 
+                  </div>
+                  <p class="my-0">My Account
+                  </p>
+                </div>
+              </a>
+              <div class="dropdown-menu border-0" aria-labelledby="user-optionss">
+                {% if request.user.is_authenticated %}
+                {% if request.user.is_superuser %}
+                <a href="{% url 'add_product' %}" class="dropdown-item">Product Management
+                </a>
+                {% endif %}
+                <a href="{% url 'profile' %}" class="dropdown-item">My Profile
+                </a>
+                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout
+                </a>
+                {% else %}
+                <a href="{% url 'account_signup' %}" class="dropdown-item">Register
+                </a>
+                <a href="{% url 'account_login' %}" class="dropdown-item">Login
+                </a>
+                {% endif %}
+              </div>
+            </li>
+            <li class="list-inline-item">
+              <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
+                <div class="text-center">
+                  <div>
+                    <i class="fas fa-shopping-bag fa-lg">
+                    </i>
+                  </div>
+                  <p class="my-0">
+                    {% if grand_total %}
+                    ${{ grand_total|floatformat:2 }}
                     {% else %}
-                        {% include 'includes/toasts/toast_info.html' %}
+                    $0.00
                     {% endif %}
-                {% endwith %}
-            {% endfor %}
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
         </div>
+      </div>
+      <div class="row bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light w-100">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+            </span>
+          </button>
+          {% include 'includes/mobile-top-header.html' %}
+          {% include 'includes/main-nav.html' %}
+        </nav>
+      </div>
+      <div id="delivery-banner" class="row text-center">
+        <div class="col bg-info text-white">
+          <h4 class="logo-font my-1">Free delivery on orders over ${{ free_delivery_threshold }}!
+          </h4>
+        </div>
+      </div>
+    </header>
+    {% if messages %}
+    <div class="message-container" id="msgall">
+      {% for message in messages %}
+      {% with message.level as level %}
+      {% if level == 40 %}
+      {% include 'includes/toasts/toast_error.html' %}
+      {% elif level == 30 %}
+      {% include 'includes/toasts/toast_warning.html' %}
+      {% elif level == 25 %}
+      {% include 'includes/toasts/toast_success.html' %}
+      {% else %}
+      {% include 'includes/toasts/toast_info.html' %}
+      {% endif %}
+      {% endwith %}
+      {% endfor %}
+    </div>
     {% endif %}
-    
     {% block page_header %}
     {% endblock %}
-    
     <main class="flex-shirnk-0 main-bg w-100">
-        {% block content %}
-        {% endblock %}
+      {% block content %}
+      {% endblock %}
     </main>
-
     <footer class="mainfooter fixed-buttom">
-        <div class="footer-middle">  
-            <div class="container">  
-                <div class="row">  
-                    <div class="col-md-4 col-sm-6">  
-                        <div class="footer-pad">
-                            <h3>Mahir // Store</h3>
-                            <p>Mahir Store is global fashion companies. It's offer inspiring
-                                and affordable fashion and the range includes several different concepts in men's, women's,
-                                children's. Company's higher purpose is to empower and inspire
-                                special and Mahir Store's sustainability promise is to make a difference for future
-                                generations by empowering all, respecting the planet and standing up for human rights.
-                            </p>
-                        </div>  
-                    </div>   
-                    <div class="col-md-4 col-sm-6">  
-                        <div class="container-fluid footer-pad">  
-                            <!--Begin Mailchimp Signup Form-->
-                            <div id="mc_embed_signup">
-                                <form action="https://herokuapp.us8.list-manage.com/subscribe/post?u=801520969853e691b833eda60&amp;id=f37b3517a8&amp;f_id=00fe68e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                                    <div id="mc_embed_signup_scroll">
-                                    <h3>Newsletter</h3>
-                                    <p>Subscribe to get the latest from Mahir Store.</p>  
-                            <div class="mc-field-group">
-                                <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-                            </label>
-                                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
-                                <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
-                            </div>
-                            <div id="mce-responses" class="clear foot">
-                                <div class="response" id="mce-error-response" style="display:none"></div>
-                                <div class="response" id="mce-success-response" style="display:none"></div>
-                            </div>
-                            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_801520969853e691b833eda60_f37b3517a8" tabindex="-1" value=""></div>
-                                <div class="optionalParent">
-                                    <div class="clear foot">
-                                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button bg-success">
-                                        <!-- <p class="brandingLogo"><a href="http://eepurl.com/iiHapD" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p> -->
-                                    </div>
-                                </div>
-                            </div>
-                            </form>
-                            </div>
-                            <!--End mc_embed_signup-->
-                        </div>  
-                    </div> 
-                    <div class="col-md-4 col-sm-6">  
-                        <div class="footer-pad text-center">  
-                            <h3> Policy</h3>  
-                            <ul class="list-unstyled">  
-                            <li><a href="https://www.privacypolicygenerator.info/live.php?token=PmhxnFEmPcvoLF9kOuYndzyDUD0BhC7X" target="_blank">Privacy Policy</a></li>     
-                            </ul><br>
-                            <h3> Follow Us </h3>
-                            <ul class="social-network social-circle">  
-                                <li><a href="https://www.facebook.com/Mahir-Store-100943332909290" target="_blank" class="icoFacebook" title="Facebook"> <i class="fa fa-facebook"></i> </a></li>  
-                            </ul>
-                        </div>  
-                    </div> 
-                </div>  
-            </div>
-            <div id="delivery-banner" class="row text-center">
-                <div class="col bg-secondary text-white">
-                    <p class="logo-font my-1">Mahir Store | Secure Payment System |  60 day right of return!</p>
+      <div class="footer-middle">  
+        <div class="container">  
+          <div class="row">  
+            <div class="col-md-4 col-sm-6">  
+              <div class="footer-pad">
+                <h3>Mahir // Store
+                </h3>
+                <p>Mahir Store is global fashion companies. It's offer inspiring
+                  and affordable fashion and the range includes several different concepts in men's, women's,
+                  children's. Company's higher purpose is to empower and inspire
+                  special and Mahir Store's sustainability promise is to make a difference for future
+                  generations by empowering all, respecting the planet and standing up for human rights.
+                </p>
+              </div>  
+            </div>   
+            <div class="col-md-4 col-sm-6">  
+              <div class="container-fluid footer-pad">  
+                <!--Begin Mailchimp Signup Form-->
+                <div id="mc_embed_signup">
+                  <form action="https://herokuapp.us8.list-manage.com/subscribe/post?u=801520969853e691b833eda60&amp;id=f37b3517a8&amp;f_id=00fe68e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="mc_embed_signup_scroll">
+                      <h3>Newsletter
+                      </h3>
+                      <p>Subscribe to get the latest from Mahir Store.
+                      </p>  
+                      <div class="mc-field-group">
+                        <label for="mce-EMAIL">Email Address  
+                          <span class="asterisk">*
+                          </span>
+                        </label>
+                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
+                        <span id="mce-EMAIL-HELPERTEXT" class="helper_text">
+                        </span>
+                      </div>
+                      <div id="mce-responses" class="clear foot">
+                        <div class="response" id="mce-error-response" style="display:none">
+                        </div>
+                        <div class="response" id="mce-success-response" style="display:none">
+                        </div>
+                      </div>
+                      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                        <input type="text" name="b_801520969853e691b833eda60_f37b3517a8" tabindex="-1" value="">
+                      </div>
+                      <div class="optionalParent">
+                        <div class="clear foot">
+                          <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button bg-success">
+                          <!-- <p class="brandingLogo"><a href="http://eepurl.com/iiHapD" title="Mailchimp - email marketing made easy and fun"><img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p> -->
+                        </div>
+                      </div>
+                    </div>
+                  </form>
                 </div>
-            </div>
-        </div>  
-      </footer>
-    
-
+                <!--End mc_embed_signup-->
+              </div>  
+            </div> 
+            <div class="col-md-4 col-sm-6">  
+              <div class="footer-pad text-center">  
+                <h3> Policy
+                </h3>  
+                <ul class="list-unstyled">  
+                  <li>
+                    <a href="https://www.privacypolicygenerator.info/live.php?token=PmhxnFEmPcvoLF9kOuYndzyDUD0BhC7X" target="_blank">Privacy Policy
+                    </a>
+                  </li>     
+                </ul>
+                <br>
+                <h3> Follow Us 
+                </h3>
+                <ul class="social-network social-circle">  
+                  <li>
+                    <a href="https://www.facebook.com/Mahir-Store-100943332909290" target="_blank" class="icoFacebook" title="Facebook"> 
+                      <i class="fa fa-facebook">
+                      </i> 
+                    </a>
+                  </li>  
+                </ul>
+              </div>  
+            </div> 
+          </div>  
+        </div>
+        <div class="row text-center">
+          <div class="col bg-secondary text-white">
+            <p class="logo-font my-1">Mahir Store | Secure Payment System |  60 day right of return!
+            </p>
+          </div>
+        </div>
+      </div>  
+    </footer>
     {% block postloadjs %}
-      <script>
-        $('.toast').toast('show');
-      </script>
+    <script>
+      $('.toast').toast('show');
+    </script>
     {% endblock %}
-   
   </body>
 </html>
