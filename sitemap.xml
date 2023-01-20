@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://mahir-store.herokuapp.com/</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/accounts/login/</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/bag/</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/?sort=price&amp;direction=asc</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/?sort=rating&amp;direction=desc</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/?sort=category&amp;direction=asc</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/?category=punjabi</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/?category=jeans</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/?category=shirts</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/?category=socks</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/?category=punjabi,jeans,shirts,socks</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/?category=dress</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/?category=top</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/?category=pants</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/?category=dress,top,pants</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/?category=boys</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/?category=girls</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/?category=baby</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/?category=boys,girls,baby</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/?category=new_arrivals</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/?category=deals</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/?category=new_arrivals,deals</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/?category=boys,baby</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/?category=girls,baby</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/20/</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/19/</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/22/</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/11/</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/18/</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/21/</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/7/</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/14/</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/12/</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/24/</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/15/</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/8/</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/17/</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/23/</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/16/</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/13/</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/5/</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/6/</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/3/</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/10/</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://mahir-store.herokuapp.com/products/2/</loc>
+  <lastmod>2023-01-20T01:16:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
