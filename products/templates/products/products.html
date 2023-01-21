@@ -74,7 +74,7 @@
                                         <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
                                         {% if product.category %}
                                         <p class="small mt-1 mb-1">
-                                            <a href="{% url 'products' %)?category={{ product.category.name}}" class="text-muted">
+                                            <a href="{% url 'products' %}?category={{ product.category.name}}" class="text-muted">
                                                 <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
                                             </a>
                                         </p>
@@ -130,13 +130,13 @@
 
 {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript">
+    <script>
         $('.btt-link').click(function(e){
             window.scrollTo(0,0)
         })
     </script>
 
-    <script type="text/javascript">
+    <script>
         $('#sort-selector').change(function() {
             var selector = $(this);
             var currentUrl = new URL(window.location);
