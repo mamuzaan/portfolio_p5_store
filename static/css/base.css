@@ -197,7 +197,7 @@ h2 {
     .footer-middle {  
       padding-top: 1em;  
       color: white;  
-    }  
+    }
     ul.social-network {  
       list-style: none;  
       display: inline;  
@@ -438,10 +438,6 @@ h2 {
 
     .footer {
         position: fixed;
-    }
-
-    .footer-pad {
-        text-align: center;
     }
 
     #mc_embed_signup {
