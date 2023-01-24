@@ -252,3 +252,13 @@ Mahir Store's utilises [facebook](https://www.facebook.com/Mahir-Store-100943332
 |  Home | Home | [No errors](readme_docs/html-validator/Home-page.png) |
 |  Product | All Product| [No errors](readme_docs/html-validator/product.png) |
 |  Product | Product details | [No errors](readme_docs/html-validator/Product-details.png) |
+
+### CSS validation
+
+Due to extensive user of Bottstrap classes, only minimial styling was applied. Most of the css code comes from bootstrap's carousele template with some modifications. The CSS code was validated with [Jigsaw Validator](https://jigsaw.w3.org/css-validator/) 
+
+| App  |  file | result |
+| ------ | ------ | ------ |
+|  Checkout | checkout.css | [No errors](readme_docs/jigsaw-validator/checkout.png) |
+|  Profiles | profiles.css | [No errors](readme_docs/jigsaw-validator/profile.png) |
+|  Base | base.css | [No errors](readme_docs/jigsaw-validator/base.png) |
