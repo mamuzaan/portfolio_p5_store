@@ -41,7 +41,7 @@
     + [Grid with filtering and sorting icons](#grid-with-filtering-and-sorting-icons)
     + [Button In trolley on all trees view](#button-in-trolley-on-all-trees-view)
     + [Checkbox not in line with label for some screen widths](#checkbox-not-in-line-with-label-for-some-screen-widths)
-    + [Addressing email to the registered user](#addressing-email-to-the-registered-user
+    + [Addressing email to the registered user](#addressing-email-to-the-registered-user)
 
 
 # Mahir Store
@@ -202,3 +202,36 @@ Mahir Store's utilises [facebook](https://www.facebook.com/Mahir-Store-100943332
 ![facebook main banner](readme_docs/facebook/facebook-pase1.png)
 ![facebook example post](readme_docs/facebook/facebook-page2.png)
 
+## Technologies Used
+
+### Languages Used
+
+   + HTML5
+   + CSS3
+   + JavaScript
+   + jQuery
+   + Python
+   + Django
+
+### Technologies and Programs Used:
++ GitHub
+    The Git was used for version control
+    Git issues were used for user stories
+    GitPod was used as IDE to write the code and push to GitHub
++ Heroku 
+    The page was deployed to Heroku
++ ElephantSQL
+    ElephantSQL was used as database for this project
++ Stripe
+    to do payments
++ AWS S3 bucket sstorage
+    for storing static files and media files
+
+ ### Frameworks Libraries and Programs Used
+
++ Balsamiq:
+    Balsamiq was used to create the wireframes during the design process.
++ Bootstrap 4:
+    Bootstrap was used to add style to the website.
++ Bootstrap icons
++ Django
