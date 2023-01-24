@@ -262,3 +262,19 @@ Due to extensive user of Bottstrap classes, only minimial styling was applied. M
 |  Checkout | checkout.css | [No errors](readme_docs/jigsaw-validator/checkout.png) |
 |  Profiles | profiles.css | [No errors](readme_docs/jigsaw-validator/profile.png) |
 |  Base | base.css | [No errors](readme_docs/jigsaw-validator/base.png) |
+
+### JavaScript validation
+
+Javascript code validation was complited on [jshint](https://jshint.com/)
+Initialy it was returning errors in relation of ES6 syntax, which was resolved by adding this line to the beggining of the file
+```
+/*jshint esversion: 6*/
+```
+
+Most of the results came with no errors except of stripe_element.js It has returned that Stripe is undefined. This is due to core functionality reffering to Stripe. Copy of the code was taken from older version Stripe pages that were referenced in Butique Ado.
+
+| App  |  file | result |
+| ------ | ------ | ------ |
+|  Checkout| stripe_elements.js| [no errors](readme_docs/jshint-validator/stripe_elementjs.png) |
+|  Profile | countryfield.js| [no errors](readme_docs/jshint-validator/countryfieldjs.png) |
+|  JS(static) | script.js| [no errors](readme_docs/jshint-validator/scriptjs.png) |
