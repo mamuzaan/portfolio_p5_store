@@ -18,8 +18,6 @@
     + [User authentication](#user-authentication)
     + [Javascript validation on input](#javascript-validation-on-input)
     + [Success page after question is submitted](#success-page-after-question-is-submitted)
-    + [Secured view to unsubscribe](#secured-view-to-unsubscribe)
-    + [Dashboard for superuser](#dashboard-for-superuser)
     + [search option in questions](#search-option-in-questions)
   * [Search Engine Optimalization](#search-engine-optimalization)
   * [Web Marketing](#web-marketing)
@@ -172,3 +170,22 @@ Another important feature that had to be dropped due to short deadline is javasc
 ### Success page after question is submitted
 
 It would be a good idea to add a success page after the question is submitted. This page could contain the Subscriber form to encourage user to subscribe
+
+### Dashboard for superuser
+
+Currently all special pages dedicated for superuser are located in navbar under a user icon. This is higly impractical and should be changed. The superuser should have a admin panel. This would feature all links that require special permittions.
+
+### search option in questions
+
+It would be a great help if the user has been welcomed with a search form on FAQ page. This would let user search the library of our questions to see if someone has asked about the issue he is having. 
+
+This would also limit repeating the same questions by other users. 
+
+## Search Engine Optimalization
+
+SEO techniques were implemented to the best of my ability. I used keywords: T-shirt, dress, punjabi, sharee, socks, pants, jeans, children, Image alternative text is descriptive.
+
+The site has been equipped with sitemap generated [here](https://www.xml-sitemaps.com/) and robots.txt. 
+
+The site also has privacy policy and terms of service - both documents generated [here](https://policymaker.io/)
+
