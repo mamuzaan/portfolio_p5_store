@@ -189,3 +189,16 @@ The site has been equipped with sitemap generated [here](https://www.xml-sitemap
 
 The site also has privacy policy and terms of service - both documents generated [here](https://policymaker.io/)
 
+## Web Marketing
+
+### Newsletter
+
+I've opted for creating a custom Newsletter model to use Mailchimp. The Page owner can send regular interesting content containing advice on Mahir Store to the subscribers. 
+
+### Facebook
+
+Mahir Store's utilises [facebook](https://www.facebook.com/Mahir-Store-100943332909290) for marketing purposes to post adverts, interesting content and get users engaged. 
+
+![facebook main banner](readme_docs/facebook/facebook-pase1.png)
+![facebook example post](readme_docs/facebook/facebook-page2.png)
+
