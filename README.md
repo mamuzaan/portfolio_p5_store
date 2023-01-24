@@ -12,13 +12,10 @@
   * [Agile Methodology](#agile-methodology)
     + [Canban board](#canban-board)
   * [Existing Features](#existing-features)
-    + [Navbar and Footer](#navbar-and-footer)
+    + [Navbar](#navbar)
     + [Footer](#footer)
     + [Shop](#shop)
     + [User authentication](#user-authentication)
-  * [Future Features](#future-features)
-    + [Google places API to fetch address data](#google-places-api-to-fetch-address-data)
-    + [Current stock](#current-stock)
     + [Javascript validation on input](#javascript-validation-on-input)
     + [Success page after question is submitted](#success-page-after-question-is-submitted)
     + [Secured view to unsubscribe](#secured-view-to-unsubscribe)
@@ -140,3 +137,38 @@ The design of this page is user profile. This page is divided for details of Use
 
 Github issues were used to create the User stories and group. Link to the project with live issues can be found [here](https://github.com/users/mamuzaan/projects/5).
 
+## Existing Features
+
+### Navbar
+
+![showpiece home page and navbar](readme_docs/showpices/Home-page.png)
+
+A wide navbar with large icons has been designed for desktop users and narrow simple navbar for mobile phone users. Each navbar appears and disapears according to bootstrap classes. 
+
+### Footer
+
+![showpiece footer page](readme_docs/showpices/Footer.png)
+
+Footer is kept very simple as set of links and a little text. Subscribe with email form is present there and social business page is active.
+
+### Shop
+
+![showpiece home page](readme_docs/showpices/Shop.png)
+
+Currently shop features is present. Future development might see adding mahir store tools added. User can add. product to shopping bag and buy from shopping bag. 
+
+User can shop with credit card. Stripe secure payment system is active there.
+
+### User authentication
+
+![showpiece login page](readme_docs/showpices/Sign-in.png)
+
+All allauth templates were styled to match the colours and feel of the page. 
+
+### Javascript validation on input
+
+Another important feature that had to be dropped due to short deadline is javascript validation on input. User currently is notified by django messages in the form of toasts that something went wrong with the form. Idealy we should have javascript preventing submittion and checking if the form is correct on user input. This would give user instant feedback and chance to correct the form. 
+
+### Success page after question is submitted
+
+It would be a good idea to add a success page after the question is submitted. This page could contain the Subscriber form to encourage user to subscribe
