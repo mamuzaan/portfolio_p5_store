@@ -10,8 +10,7 @@
     + [Product details](#product-details)
     + [Profile app](#profile-app)
   * [Agile Methodology](#agile-methodology)
-    + [Canban board and issues](#canban-board-and-issues)
-    + [Sprints - milestones](#sprints---milestones)
+    + [Canban board](#canban-board)
   * [Existing Features](#existing-features)
     + [Navbar and Footer](#navbar-and-footer)
     + [Footer](#footer)
@@ -131,4 +130,13 @@ The design of this page is products for details of this product. This page is di
 ![wireframes of user profile apps page](readme_docs/wireframe/profile-page.png)
 
 The design of this page is user profile. This page is divided for details of Users name, address, state, county, postcode, country and history of products already user shop.
+
+## Agile Methodology
+
+### Canban board
+
+![Screenshot of the canban board](readme_docs/canban-board/kanban-board.png)
+
+
+Github issues were used to create the User stories and group. Link to the project with live issues can be found [here](https://github.com/users/mamuzaan/projects/5).
 
