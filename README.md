@@ -3,7 +3,7 @@
   * [UX](#ux)
   * [Purpose](#purpose)
   * [User Stories](#user-stories)
-    + [User Stories for in ths project:](#user-stories-for-in-ths-project:)
+    + [User Stories for in this project](#user-stories-for-in-this-project)
   * [Wireframes](#wireframes)
     + [Home page](#home-page)
     + [All Products](#all-products)
@@ -65,7 +65,7 @@ The app is designed as a e-commerce application that encourages the users to mak
 
 ## User Stories
 
-### User Stories for in ths project:
+### User Stories for in this project
 
 | id  |  content |
 | ------ | ------ |
@@ -235,3 +235,20 @@ Mahir Store's utilises [facebook](https://www.facebook.com/Mahir-Store-100943332
     Bootstrap was used to add style to the website.
 + Bootstrap icons
 + Django
+
+## Code Validation
+
+### HTML beautify
+
+ [online HTML code Beautifier](https://htmlbeautify.com/). 
+
+### HTML valiation
+
+[HTML validator](https://validator.w3.org/nu/#textarea)
+
+
+| App  |  page | result |
+| ------ | ------ | ------ |
+|  Home | Home | [No errors](readme_docs/html-validator/Home-page.png) |
+|  Product | All Product| [No errors](readme_docs/html-validator/product.png) |
+|  Product | Product details | [No errors](readme_docs/html-validator/Product-details.png) |
