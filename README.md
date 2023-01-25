@@ -252,6 +252,12 @@ Mahir Store's utilises [facebook](https://www.facebook.com/Mahir-Store-100943332
 |  Home | Home | [No errors](readme_docs/html-validator/Home-page.png) |
 |  Product | All Product| [No errors](readme_docs/html-validator/product.png) |
 |  Product | Product details | [No errors](readme_docs/html-validator/Product-details.png) |
+|  Product | Add Product | [No errors]() |
+|  Product | Edit Product | [No errors]() |
+|  Profile | Profile | [No errors](readme_docs/html-validator/profile.png) |
+|  Checkout | Checkout | [No errors](readme_docs/html-validator/checkout.png) |
+|  Checkout | Checkout success | [No errors](readme_docs/html-validator/checkout_success.png) |
+|  Bag | Bag | [No errors](readme_docs/html-validator/bag.png) |
 
 ### CSS validation
 
