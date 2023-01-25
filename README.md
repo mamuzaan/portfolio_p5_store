@@ -35,7 +35,6 @@
     + [Python beautify](#python-beautify)
     + [Python validator](#python-validator)
   * [Tests](#tests)
-    + [Automated tests](#automated-tests)
     + [Lighthouse](#lighthouse)
   * [Project Bugs and Solutions:](#project-bugs-and-solutions-)
     + [Grid with filtering and sorting icons](#grid-with-filtering-and-sorting-icons)
@@ -284,3 +283,54 @@ Most of the results came with no errors except of stripe_element.js It has retur
 |  Checkout| stripe_elements.js| [no errors](readme_docs/jshint-validator/stripe_elementjs.png) |
 |  Profile | countryfield.js| [no errors](readme_docs/jshint-validator/countryfieldjs.png) |
 |  JS(static) | script.js| [no errors](readme_docs/jshint-validator/scriptjs.png) |
+
+
+### Python validator
+
++ Django code validation PEP8online.com site is not available at the moment. Its corrently down and thats why I use pycodestyle in gitpod workspace. In the django framework, python code validation complated by gitpod workspace. It shows problem at starting like "line is too long".
+
+| App name  |  file name | result |
+| ------ | ------ |------ |
+| mahir_store(project name) |  urls.py |  []() |
+| mahir_store(project name) |  settings.py |  []() |
+| mahir_store(project name) |  asgi.py |  []() |
+| mahir_store(project name) |  wsgi.py |  []() |
+| home |  apps.py |  []() |
+| home |  urls.py |  []() |
+| home |  views.py |  []() |
+| products |  admin.py |  []() |
+| products |  apps.py |  []() |
+| products |  forms.py |  []() |
+| products |  models.py |  []() |
+| products |  urls.py |  []() |
+| products |  views.py |  []() |
+| bag |  apps.py |  []() |
+| bag |  contexts.py |  []() |
+| bag |  urls.py |  []() |
+| bag |  views.py |  []() |
+| products |  widgets.py |  []() |
+| profiles |  apps.py |  []() |
+| profiles |  forms.py |  []() |
+| profiles |  models.py |  []() |
+| profiles |  urls.py |  []() |
+| profiles |  views.py |  []() |
+| checkout |  __init__.py |  []() |
+| checkout | admin.py |  []() |
+| checkout | apps.py |  []() |
+| checkout | forms.py |  []() |
+| checkout | models.py |  []() |
+| checkout | signals.py |  []() |
+| checkout | urls.py |  []() |
+| checkout | views.py |  []() |
+| checkout | webhook_handler.py |  []() |
+| checkout | webhooks.py |  []() |
+
+# Tests
+------
+
+### Lighthouse
+
+- Initial report showed only 88% on accesibility. 
+- Performance 96% and it could be further improved by analysing the file types of images. Also the heroku app starts really slowly as I have free subscription.
+
+![lighthouse report](readme_docs/lighthouse.png)
