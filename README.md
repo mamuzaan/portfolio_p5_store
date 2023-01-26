@@ -622,6 +622,7 @@ class MediaStorage(S3Boto3Storage):
 ## Credits 
 ### Online resources
 * [Fontawsome](https://fontawesome.com/)
+* [W3School](https://www.w3schools.com/)
 * [Bootstrap 4](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
 * [Markdown best practices](https://www.markdownguide.org/basic-syntax/)
 * [Markdown Table of content generator](http://ecotrust-canada.github.io/markdown-toc/)
@@ -633,6 +634,8 @@ class MediaStorage(S3Boto3Storage):
 * [starter template](https://getbootstrap.com/docs/4.6/getting-started/introduction/) from bootstrap 4
 * base template from [bootstrap examples](https://getbootstrap.com/docs/4.0/)
 * A lot of short solution from stackoverflow.com and google.
+* To create projects readme video tutorial by JoGorska on slack.
+* Fix bug from google search, youtube tutorial and meny tutor and mentor support.
 
 ### People
 
