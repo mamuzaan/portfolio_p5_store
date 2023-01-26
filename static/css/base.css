@@ -449,5 +449,11 @@ h2 {
         background:black;
         clear:left;
         font:14px Helvetica,Arial,sans-serif; 
-        width:250px;}
+        width:250px;
+    }
+    
+    .card-img-top {
+        width: 160px !important;
+        height: 250px !important;
+    }
 }
