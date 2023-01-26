@@ -271,7 +271,7 @@ h2 {
       background-color: #F9F9F9;  
     }
 
-    .card-img-top {
+    .product-img {
         width: 250px !important;
         height: 300px !important;
     }
@@ -450,10 +450,5 @@ h2 {
         clear:left;
         font:14px Helvetica,Arial,sans-serif; 
         width:250px;
-    }
-    
-    .card-img-top {
-        width: 160px !important;
-        height: 250px !important;
     }
 }
