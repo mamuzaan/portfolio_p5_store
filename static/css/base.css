@@ -478,3 +478,55 @@ h2 {
         padding-top: 8rem !important;
     }
 }
+
+/* mobile version for header */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .navbar-brand h2 {
+        font-size: 20px;
+    }
+    
+    /* Menu button styles */
+    .navbar-toggler {
+        border-color: #000;
+    }
+    
+    /* Navigation styles */
+    .navbar-nav {
+        margin-top: 10px;
+    }
+    .navbar-nav li {
+        margin-bottom: 10px;
+    }
+    .navbar-nav .nav-link {
+        font-size: 18px;
+        padding: 10px;
+    }
+    
+    /* Search form styles */
+    .form-inline {
+        margin-top: 10px;
+    }
+
+    .form-control {
+        width: 100%;
+    }
+
+    .form-control[type="submit"] {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    /* User options styles */
+    .dropdown-menu-right {
+        right: 0;
+        left: auto;
+    }
+
+    .dropdown-item {
+        font-size: 18px;
+        padding: 10px;
+    }
+    .dropdown-item:hover {
+        background-color: #f2f2f2;
+    }
+}
