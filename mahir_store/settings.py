@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'checkout',
     'profiles',
     'storages',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
