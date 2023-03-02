@@ -530,3 +530,55 @@ h2 {
         background-color: #f2f2f2;
     }
 }
+
+/* Mobile styles main page */
+@media (max-width: 767px) {
+    .hero-section {
+        padding: 4rem 1rem !important;
+    }
+
+    .hero-section .container {
+        max-width: none !important;
+    }
+
+    .hero-section .row {
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+    }
+
+    .hero-section .col-md-6 {
+        max-width: 100% !important;
+        flex: none !important;
+    }
+
+    .hero-section img {
+        max-width: 100% !important;
+    }
+
+    .hero-content {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .hero-title { 
+        font-size: 1rem;
+    }
+
+    .jumbotron {
+        border-radius: 0 !important;
+        padding: 1em !important;
+    }
+
+    .jumbotron h1 {
+        font-size: 1.5rem;
+    }
+
+    .jumbotron p {
+        font-size: 1rem;
+    }
+
+    .card-img-top {
+        max-width: 100%;
+        height: 350px !important;
+    }
+}
