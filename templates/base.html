@@ -60,6 +60,24 @@
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
+          <div class="collapse navbar-collapse" id="main-nav">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'home' %}">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  All Products
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                  <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
+                  <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
+                  <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+                </div>
+              </li>
+            </ul>
+          </div>
         </nav>
       </div>
     </header>
