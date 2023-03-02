@@ -138,11 +138,6 @@ else:
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
-# VALUE1 = 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'
-# VALUE2 = 'django.contrib.auth.password_validation.MinimumLengthValidator'
-# VALUE3 = 'django.contrib.auth.password_validation.CommonPasswordValidator'
-# VALUE4 = 'django.contrib.auth.password_validation.NumericPasswordValidator'
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
