@@ -393,6 +393,10 @@ h2 {
     .header-container {
         padding-top: 165px;
     }
+
+    .hero-section {
+        padding-top: 4em !important;
+    }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
