@@ -38,4 +38,38 @@
         </div>
     </div>
 </div>
+
+<div class="container">
+    <div class="col-12 d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+      <div class="col-md-6 bg-info mr-md-3 pt-2 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h2 class="display-5">Men`s Clothing</h2>
+          <p class="lead">Find all men's cloths here</p>
+        </div>
+        <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 420px; border-radius: 21px 21px 0 0;">
+          <div class="card h-100">
+            <img class="card-img-top" src="{{ MEDIA_URL }}710+M61cX4L._UL1500_.jpg" alt="Men clothes" width="100" height="350">
+            <div class="card-footer p-2 pt-0 border-top-0 bg-transparent">
+                <div class="text-center"><a href="{% url 'products' %}?category=shirts,jeans,socks" class="btn btn-primary">Buy Now</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 bg-success mr-md-3 pt-2 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+        <div class="my-3 p-3">
+          <h2 class="display-5">Women`s Clothing</h2>
+          <p class="lead">Find special womens's clothing </p>
+        </div>
+        <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 420px; border-radius: 21px 21px 0 0;">
+          <div class="card h-100">
+            <img class="card-img-top" src="{{ MEDIA_URL }}81FucscuuoL._UL1500_.jpg" alt="Women clothes" width="100" height="350">
+            <div class="card-footer p-2 pt-0 border-top-0 bg-transparent">
+                <div class="text-center"><a href="{% url 'products' %}?category=dress,top,pants" class="btn btn-primary">Buy Now</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+</div>
 {% endblock %}
