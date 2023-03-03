@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Category
+from .models import Product, Category, Wishlist
 from .forms import ProductForm
 
 
@@ -132,3 +132,19 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+def add_product_to_wishlist(request, product_id):
+    """ A view to show individual product details """
+    product = get_object_or_404(Product, pk=product_id)
+    wishlist, created = Wishlist.objects.get_or_create(user=request.user)
+    if product not in wishlist.products.all():
+        wishlist.products.add(product)
+    else:
+        wishlist.products.remove(product)
+    wishlist.save()
+
+    context = {
+        'product': product,
+    }
+    return render(request, 'products/product_detail.html', context)

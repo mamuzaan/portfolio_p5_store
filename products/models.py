@@ -39,4 +39,4 @@ class Wishlist(models.Model):
     products = models.ManyToManyField(Product)
 
     def __str__(self):
-        return self.user
+        return self.user.username

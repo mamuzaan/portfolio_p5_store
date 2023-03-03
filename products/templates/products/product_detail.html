@@ -42,6 +42,13 @@
                 {% else %}
                     <small class="text-muted">No Rating</small>
                 {% endif %}
+                <div class="input-group-append">
+                    <a href="{% url 'add_product_to_wishlist' product.id %}" class="rounded-0" id="">
+                        <span class="icon">
+                            <i class="fas fa-heart"></i>
+                        </span>
+                    </a>
+                </div>
                 {% if request.user.is_superuser %}
                     <small class="ml-3">
                         <a href="{% url 'edit_product' product.id %}">Edit</a>
