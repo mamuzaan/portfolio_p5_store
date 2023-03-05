@@ -276,6 +276,13 @@ h2 {
         height: 300px !important;
     }
 
+.flex-wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 /* ------------------- Mailchimp -------------------- */
 #mc_embed_signup {
     background:black;
