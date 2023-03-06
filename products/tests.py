@@ -1,5 +1,5 @@
 from django.test import TestCase
-from .models import Category, Product
+from .models import Category, Product, Wishlist
 from django.contrib.auth.models import User
 
 
@@ -60,3 +60,35 @@ class ProductModelTest(TestCase):
         product = Product.objects.get(id=1)
         expected_object_name = f'{product.name}'
         self.assertEqual(expected_object_name, str(product))
+
+
+class WishlistModelTest(TestCase):
+
+    @classmethod
+    def setUpTestData(cls):
+        user = User.objects.create(username='testuser')
+        Category.objects.create(name='Test Category')
+        Product.objects.create(
+            category=Category.objects.get(id=1),
+            name='Test Product',
+            description='Test description',
+            price=9.99,
+        )
+        Wishlist.objects.create(
+            user=user,
+        )
+
+    def test_user_label(self):
+        wishlist = Wishlist.objects.get(id=1)
+        field_label = wishlist._meta.get_field('user').verbose_name
+        self.assertEqual(field_label, 'user')
+
+    def test_products_label(self):
+        wishlist = Wishlist.objects.get(id=1)
+        field_label = wishlist._meta.get_field('products').verbose_name
+        self.assertEqual(field_label, 'products')
+
+    def test_object_name_is_username(self):
+        wishlist = Wishlist.objects.get(id=1)
+        expected_object_name = f'{wishlist.user.username}'
+        self.assertEqual(expected_object_name, str(wishlist))
