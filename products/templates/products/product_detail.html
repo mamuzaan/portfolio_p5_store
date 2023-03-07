@@ -42,12 +42,31 @@
                 {% else %}
                     <small class="text-muted">No Rating</small>
                 {% endif %}
-                <div class="input-group-append">
-                    <a href="{% url 'add_product_to_wishlist' product.id %}" class="rounded-0" id="">
-                        <span class="icon">
-                            <i class="fas fa-heart"></i>
-                        </span>
-                    </a>
+                <!--wishlist-->
+                <div class="col-6">
+                    <strong>
+                    {% if user.is_authenticated %}
+                        <form class="d-inline" action="{% url 'add_product_to_wishlist' product.id %}" method="POST">
+                        {% csrf_token %}
+                        {% if product in wishlist.products.all %}
+                        <button type="submit" class="btn btn-link p-0">ADD TO WISH LIST
+                            <span class="icon text-danger"> 
+                                <i class="far fa-heart"></i>
+                            </span>
+                        </button>
+                        {% else %}
+                        <button type="submit" class="btn btn-link p-0">ADD TO WISH LIST
+                            <span class="icon text-danger">
+                                <i class="fas fa-heart"></i>
+                            </span>
+                        </button>
+                        {% endif %}
+                        </form>
+                    {% else %}
+                        <span class="text-danger"><i class="fas fa-heart"></i></span>
+                    {% endif %}
+                    </strong>
+                    <strong class="text-secondary">{{ product.wishlist_set.count }} </strong>
                 </div>
                 {% if request.user.is_superuser %}
                     <small class="ml-3">
