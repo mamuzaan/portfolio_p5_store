@@ -152,6 +152,31 @@
                         {% endwith %}
                     </div>
                 </form>
+                <h2>Comments</h2>
+                {% if comments %}
+                    <ul>
+                    {% for comment in comments %}
+                    <li>
+                        {{ comment.text }} - {{ comment.user.username }} - {{ comment.created_at }}
+                        {% if comment.user == request.user %}
+                        <form method="post" action="{% url 'delete_comment' comment.id %}">
+                            {% csrf_token %}
+                            <button type="submit">Delete</button>
+                        </form>
+                        {% endif %}
+                    </li>
+                    {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>No comments yet.</p>
+                {% endif %}
+              
+                <h2>Add Comment</h2>
+                <form method="post" action="{% url 'comment_product' product.id %}">
+                    {% csrf_token %}
+                    {{ comments_form }}
+                    <button type="submit">Submit</button>
+                </form>
             </div>
         </div>
     </div>
