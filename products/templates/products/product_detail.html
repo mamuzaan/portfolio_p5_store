@@ -30,6 +30,29 @@
             <div class="product-details-container mb-5 mt-md-5">
                 <p class="mb-0">{{ product.name }}</p>
                 <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+
+                <div class="col-4">
+                    <strong>
+                        {% if user.is_authenticated %}
+                        <form class="d-inline" action="{% url 'like_product' product.id %}" method="POST">
+                            {% csrf_token %}
+                            {% if liked %}
+                            <button type="submit" class="btn-like">
+                                <i class="fas fa-thumbs-down"></i>
+                            </button>
+                            {% else %}
+                            <button type="submit" class="btn-like">
+                                <i class="far fa-thumbs-up"></i>
+                            </button>
+                            {% endif %}
+                        </form>
+                        {% else %}
+                        <span class="text-secondary"><i class="far fa-thumbs-up"></i></span>
+                        {% endif %}
+                    </strong>
+                    <strong class="text-secondary">{{ post.like_product.set.count }} </strong>
+                </div>
+
                 {% if product.category %}
                 <p class="small mt-1 mb-1">
                     <a href="{% url 'products' %}?category={{ product.category.name}}" class="text-muted">

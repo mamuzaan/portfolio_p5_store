@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Category, Wishlist
+from .models import Product, Category, Wishlist, Like
 from .forms import ProductForm
 
 
@@ -59,9 +59,15 @@ def all_products(request):
 def product_detail(request, product_id):
     """ A view to show individual product details """
     product = get_object_or_404(Product, pk=product_id)
+    like, created = Like.objects.get_or_create(user=request.user)
+    liked = False
 
+    if product in like.products.all():
+        liked = True
+        
     context = {
         'product': product,
+        'liked': liked,
     }
     return render(request, 'products/product_detail.html', context)
 
@@ -145,6 +151,27 @@ def add_product_to_wishlist(request, product_id):
     wishlist.save()
 
     context = {
+        'product': product,
+    }
+    return render(request, 'products/product_detail.html', context)
+
+
+@login_required
+def like_product(request, product_id):
+    """ A view to show like or unlike individual products """
+    product = get_object_or_404(Product, pk=product_id)
+    like, created = Like.objects.get_or_create(user=request.user)
+    liked = False
+    if product not in like.products.all():
+        like.products.add(product)
+        liked = True
+    else:
+        like.products.remove(product)
+    like.save()
+
+    context = {
+        'like': like,
+        'liked': liked,
         'product': product,
     }
     return render(request, 'products/product_detail.html', context)

@@ -49,4 +49,4 @@ class Like(models.Model):
     products = models.ManyToManyField(Product)
 
     def __str__(self):
-        return f"{self.user.username} likes {self.product.name}"
+        return self.user.username
