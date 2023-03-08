@@ -50,3 +50,13 @@ class Like(models.Model):
 
     def __str__(self):
         return self.user.username
+
+
+class Comment(models.Model):
+    user = models.ForeignKey(User, null=True, blank=True, on_delete=models.SET_NULL)
+    product = models.ForeignKey(Product, null=True, blank=True, on_delete=models.CASCADE)
+    text = models.TextField(verbose_name="Comment")
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.user.username} - {self.product.name} - {self.created_at}"

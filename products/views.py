@@ -3,8 +3,9 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Category, Wishlist, Like
-from .forms import ProductForm
+from .models import Product, Category, Wishlist, Like, Comment
+from .forms import ProductForm, CommentForm
+from django.http import HttpResponseRedirect
 
 
 def all_products(request):
@@ -59,16 +60,24 @@ def all_products(request):
 def product_detail(request, product_id):
     """ A view to show individual product details """
     product = get_object_or_404(Product, pk=product_id)
-    like, created = Like.objects.get_or_create(user=request.user)
     liked = False
+    if request.user.is_authenticated:
+        like, created = Like.objects.get_or_create(user=request.user)
+        comments = Comment.objects.filter(user=request.user)
+        if product in like.products.all():
+            liked = True
+        comments_form = CommentForm()
 
-    if product in like.products.all():
-        liked = True
-        
-    context = {
-        'product': product,
-        'liked': liked,
-    }
+        context = {
+            'product': product,
+            'liked': liked,
+            'comments_form': comments_form,
+            'comments': comments
+        }
+    else:
+        context = {
+            'product': product,
+        }
     return render(request, 'products/product_detail.html', context)
 
 
@@ -175,3 +184,31 @@ def like_product(request, product_id):
         'product': product,
     }
     return render(request, 'products/product_detail.html', context)
+
+
+@login_required
+def add_comment(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.user = request.user
+            comment.product = product
+            comment.save()
+
+            return HttpResponseRedirect(reverse('product_detail', args=[product.id]))
+
+@login_required
+def delete_comment(request, comment_id):
+    comment = get_object_or_404(Comment, pk=comment_id)
+
+    if comment.user != request.user:
+        return HttpResponseRedirect(reverse('home'))
+
+    product_id = comment.product.id
+    comment.delete()
+
+    return HttpResponseRedirect(reverse('product_detail', args=[product_id]))
