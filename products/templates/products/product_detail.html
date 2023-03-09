@@ -32,7 +32,6 @@
                 <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
 
                 <div class="col-4">
-                    <strong>
                         {% if user.is_authenticated %}
                         <form class="d-inline" action="{% url 'like_product' product.id %}" method="POST">
                             {% csrf_token %}
@@ -49,7 +48,6 @@
                         {% else %}
                         <span class="text-secondary"><i class="far fa-thumbs-up"></i></span>
                         {% endif %}
-                    </strong>
                     <strong class="text-secondary">{{ post.like_product.set.count }} </strong>
                 </div>
 
@@ -67,7 +65,6 @@
                 {% endif %}
                 <!--wishlist-->
                 <div class="col-6">
-                    <strong>
                     {% if user.is_authenticated %}
                         <form class="d-inline" action="{% url 'add_product_to_wishlist' product.id %}" method="POST">
                         {% csrf_token %}
@@ -88,7 +85,6 @@
                     {% else %}
                         <span class="text-danger"><i class="fas fa-heart"></i></span>
                     {% endif %}
-                    </strong>
                     <strong class="text-secondary">{{ product.wishlist_set.count }} </strong>
                 </div>
                 {% if request.user.is_superuser %}
