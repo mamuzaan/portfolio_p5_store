@@ -151,8 +151,9 @@
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         {% endwith %}
                     </div>
-                </form>
-                <h2>Comments</h2>
+                </form><br>
+                <hr>
+                <h4>Comments</h4>
                 {% if comments %}
                     <ul>
                     {% for comment in comments|slice:":3" %}
@@ -170,12 +171,13 @@
                 {% else %}
                     <p>No comments yet.</p>
                 {% endif %}
-              
-                <h2>Add Comment</h2>
+                <br>
+                <hr>    
+                <h4>Add Comment</h4>
                 <form method="post" action="{% url 'comment_product' product.id %}">
                     {% csrf_token %}
                     {{ comments_form }}
-                    <button type="submit">Submit</button>
+                    <button class="mt-2" type="submit">Submit</button>
                 </form>
             </div>
         </div>
