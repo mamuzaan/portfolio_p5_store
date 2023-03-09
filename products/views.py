@@ -201,6 +201,26 @@ def add_comment(request, product_id):
 
             return HttpResponseRedirect(reverse('product_detail', args=[product.id]))
 
+
+@login_required
+def edit_comment(request, product_id):
+    comment = get_object_or_404(Comment, pk=product_id)
+
+    if comment.user != request.user:
+        return HttpResponseForbidden("You are not authorized to perform this action.")
+
+    if request.method == 'POST':
+        form = CommentForm(request.POST, instance=comment)
+
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect(reverse('product_detail', args=[comment.product.id]))
+    else:
+        form = CommentForm(instance=comment)
+
+    return render(request, 'products/edit_comment.html', {'form': form, 'comment': comment})
+
+
 @login_required
 def delete_comment(request, comment_id):
     comment = get_object_or_404(Comment, pk=comment_id)

@@ -155,14 +155,14 @@
                 <h2>Comments</h2>
                 {% if comments %}
                     <ul>
-                    {% for comment in comments %}
+                    {% for comment in comments|slice:":3" %}
                     <li>
                         {{ comment.text }} - {{ comment.user.username }} - {{ comment.created_at }}
                         {% if comment.user == request.user %}
-                        <form method="post" action="{% url 'delete_comment' comment.id %}">
-                            {% csrf_token %}
-                            <button type="submit">Delete</button>
-                        </form>
+                            <small class="ml-3">
+                                <a href="{% url 'edit_comment' comment.id %}">Edit</a>
+                                <a href="{% url 'delete_comment' comment.id %}" class="text-danger">Delete</a>
+                            </small>
                         {% endif %}
                     </li>
                     {% endfor %}
