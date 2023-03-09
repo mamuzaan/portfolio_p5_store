@@ -305,14 +305,14 @@ Most of the results came with no errors except of stripe_element.js It has retur
 
 ### Python validator
 
-+ Django code validation PEP8online.com site is not available at the moment. Its corrently down and thats why I use pycodestyle in gitpod workspace. In the django framework, python code validation complated by gitpod workspace. It shows problem at starting like "line is too long".
++ Django code validation PEP8online.com site is not available at the moment but used python linter. In the django framework, python code validation complated by gitpod workspace. It shows problem at starting like "line is too long".
 
 | App name  |  file name | result |
 | ------ | ------ |------ |
-| mahir_store(project name) |  urls.py |  []() |
-| mahir_store(project name) |  settings.py |  []() |
-| mahir_store(project name) |  asgi.py |  []() |
-| mahir_store(project name) |  wsgi.py |  []() |
+| mahir_store(project name) |  urls.py |  [no error](readme_docs/python-validator/urls.png) |
+| mahir_store(project name) |  settings.py |  [no error](readme_docs/python-validator/settings.png) |
+| mahir_store(project name) |  asgi.py |  [no error](readme_docs/python-validator/asgi.png) |
+| mahir_store(project name) |  wsgi.py |  [no error](readme_docs/python-validator/wsgi.png) |
 | home |  apps.py |  []() |
 | home |  urls.py |  []() |
 | home |  views.py |  []() |
