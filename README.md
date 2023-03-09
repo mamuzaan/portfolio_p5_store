@@ -99,6 +99,9 @@ The app is designed as a e-commerce application that encourages the users to mak
 |  [#22](https://github.com/mamuzaan/portfolio_p5_store/issues/22) | As a Store owner I want to be able to add a product so that I can add new items to my store |
 |  [#23](https://github.com/mamuzaan/portfolio_p5_store/issues/23) | As a Store owner I want to be able to Edit Update a product so that I can change product prices, descriptions, images and other product criteria |
 |  [#24](https://github.com/mamuzaan/portfolio_p5_store/issues/24) | As a Store owner I want to be able to delete a product so that I can remove items that are no longer for sale |
+|  [#25](https://github.com/mamuzaan/portfolio_p5_store/issues/25) | As a register site user I want to be able to view wish list in product details So that user can add product to wish list |
+|  [#26](https://github.com/mamuzaan/portfolio_p5_store/issues/26) | As a register site user I want to be able to like and unlike product so that user can like or unlike product page |
+|  [#27](https://github.com/mamuzaan/portfolio_p5_store/issues/27) | As a site user I want to able to comment on product So that user can add comment about product and update and delete |
 
 ## Wireframes 
 
