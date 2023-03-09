@@ -309,13 +309,13 @@ Most of the results came with no errors except of stripe_element.js It has retur
 
 | App name  |  file name | result |
 | ------ | ------ |------ |
-| mahir_store(project name) |  urls.py |  [no error](readme_docs/python-validator/urls.png) |
-| mahir_store(project name) |  settings.py |  [no error](readme_docs/python-validator/settings.png) |
+| mahir_store(project name) |  urls.py |  [no error - line is too long](readme_docs/python-validator/urls.png) |
+| mahir_store(project name) |  settings.py |  [no error - line is too long](readme_docs/python-validator/settings.png) |
 | mahir_store(project name) |  asgi.py |  [no error](readme_docs/python-validator/asgi.png) |
 | mahir_store(project name) |  wsgi.py |  [no error](readme_docs/python-validator/wsgi.png) |
-| home |  apps.py |  []() |
-| home |  urls.py |  []() |
-| home |  views.py |  []() |
+| home |  apps.py |  [no error](readme_docs/python-validator/home-apps/apps.png) |
+| home |  urls.py |  [no error](readme_docs/python-validator/home-apps/urls.png) |
+| home |  views.py |  [no error](readme_docs/python-validator/home-apps/views.png) |
 | products |  admin.py |  []() |
 | products |  apps.py |  []() |
 | products |  forms.py |  []() |
