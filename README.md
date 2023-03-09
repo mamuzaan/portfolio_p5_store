@@ -9,6 +9,8 @@
     + [All Products](#all-products)
     + [Product details](#product-details)
     + [Profile app](#profile-app)
+  * [Database Diagram](#database-diagram)
+    + [Data Diagram](#data-diagram)
   * [Agile Methodology](#agile-methodology)
     + [Canban board](#canban-board)
   * [Existing Features](#existing-features)
@@ -129,6 +131,14 @@ The design of this page is products for details of this product. This page is di
 ![wireframes of user profile apps page](readme_docs/wireframe/profile-page.png)
 
 The design of this page is user profile. This page is divided for details of Users name, address, state, county, postcode, country and history of products already user shop.
+
+## Database Diagram
+
+### Data Diagram
+
+Created a database schema, by graph_models and dot extention file. This create by https://dreampuf.github.io/GraphvizOnline/.
+
+![Download from graphvizOnline](data_diagram.png)
 
 ## Agile Methodology
 
