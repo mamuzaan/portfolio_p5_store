@@ -323,10 +323,10 @@ Most of the results came with no errors except of stripe_element.js It has retur
 | products |  urls.py |  [no error - line is too long](readme_docs/python-validator/products-app/urls.png) |
 | products |  views.py |  [no error - line is too long](readme_docs/python-validator/products-app/views.png) |
 | products |  widgets.py |  [no error - line is too long](readme_docs/python-validator/products-app/widgets.png) |
-| bag |  apps.py |  []() |
-| bag |  contexts.py |  []() |
-| bag |  urls.py |  []() |
-| bag |  views.py |  []() |
+| bag |  apps.py |  [no error](readme_docs/python-validator/bag-app/apps.png) |
+| bag |  contexts.py |  [no error](readme_docs/python-validator/bag-app/contexts.png) |
+| bag |  urls.py |  [no error](readme_docs/python-validator/bag-app/urls.png) |
+| bag |  views.py |  [no error - line is too long](readme_docs/python-validator/bag-app/views.png) |
 | profiles |  apps.py |  []() |
 | profiles |  forms.py |  []() |
 | profiles |  models.py |  []() |
