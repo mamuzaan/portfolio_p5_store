@@ -198,6 +198,7 @@ def add_comment(request, product_id):
             comment.user = request.user
             comment.product = product
             comment.save()
+            messages.success(request, 'Your comment has been added successfully!')
 
             return HttpResponseRedirect(reverse('product_detail', args=[product.id]))
 
@@ -214,6 +215,7 @@ def edit_comment(request, product_id):
 
         if form.is_valid():
             form.save()
+            messages.success(request, 'Your comment has been updated successfully!')
             return HttpResponseRedirect(reverse('product_detail', args=[comment.product.id]))
     else:
         form = CommentForm(instance=comment)
@@ -230,5 +232,6 @@ def delete_comment(request, comment_id):
 
     product_id = comment.product.id
     comment.delete()
+    messages.success(request, 'Your comment has been deleted successfully!')
 
     return HttpResponseRedirect(reverse('product_detail', args=[product_id]))
