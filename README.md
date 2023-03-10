@@ -327,11 +327,11 @@ Most of the results came with no errors except of stripe_element.js It has retur
 | bag |  contexts.py |  [no error](readme_docs/python-validator/bag-app/contexts.png) |
 | bag |  urls.py |  [no error](readme_docs/python-validator/bag-app/urls.png) |
 | bag |  views.py |  [no error - line is too long](readme_docs/python-validator/bag-app/views.png) |
-| profiles |  apps.py |  []() |
-| profiles |  forms.py |  []() |
-| profiles |  models.py |  []() |
-| profiles |  urls.py |  []() |
-| profiles |  views.py |  []() |
+| profiles |  apps.py |  [no error](readme_docs/python-validator/profile-app/apps.png) |
+| profiles |  forms.py |  [no error](readme_docs/python-validator/profile-app/forms.png) |
+| profiles |  models.py |  [no error](readme_docs/python-validator/profile-app/models.png) |
+| profiles |  urls.py |  [no error](readme_docs/python-validator/profile-app/urls.png) |
+| profiles |  views.py |  [no error](readme_docs/python-validator/profile-app/views.png) |
 | checkout |  __init__.py |  []() |
 | checkout | admin.py |  []() |
 | checkout | apps.py |  []() |
