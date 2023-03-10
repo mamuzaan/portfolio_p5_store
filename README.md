@@ -316,17 +316,17 @@ Most of the results came with no errors except of stripe_element.js It has retur
 | home |  apps.py |  [no error](readme_docs/python-validator/home-apps/apps.png) |
 | home |  urls.py |  [no error](readme_docs/python-validator/home-apps/urls.png) |
 | home |  views.py |  [no error](readme_docs/python-validator/home-apps/views.png) |
-| products |  admin.py |  []() |
-| products |  apps.py |  []() |
-| products |  forms.py |  []() |
-| products |  models.py |  []() |
-| products |  urls.py |  []() |
-| products |  views.py |  []() |
+| products |  admin.py |  [no error](readme_docs/python-validator/products-app/admin.png) |
+| products |  apps.py |  [no error](readme_docs/python-validator/products-app/apps.png) |
+| products |  forms.py |  [no error](readme_docs/python-validator/products-app/forms.png) |
+| products |  models.py |  [no error - line is too long](readme_docs/python-validator/products-app/models.png) |
+| products |  urls.py |  [no error - line is too long](readme_docs/python-validator/products-app/urls.png) |
+| products |  views.py |  [no error - line is too long](readme_docs/python-validator/products-app/views.png) |
+| products |  widgets.py |  [no error - line is too long](readme_docs/python-validator/products-app/widgets.png) |
 | bag |  apps.py |  []() |
 | bag |  contexts.py |  []() |
 | bag |  urls.py |  []() |
 | bag |  views.py |  []() |
-| products |  widgets.py |  []() |
 | profiles |  apps.py |  []() |
 | profiles |  forms.py |  []() |
 | profiles |  models.py |  []() |
