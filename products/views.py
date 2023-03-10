@@ -63,7 +63,7 @@ def product_detail(request, product_id):
     liked = False
     if request.user.is_authenticated:
         like, created = Like.objects.get_or_create(user=request.user)
-        comments = Comment.objects.filter(user=request.user)
+        comments = Comment.objects.filter(product=product)
         if product in like.products.all():
             liked = True
         comments_form = CommentForm()
