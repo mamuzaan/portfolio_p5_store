@@ -44,7 +44,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6 order-md-first">
-                    <p class="text-muted mt-3 text-center text-md-left">
+                    <p class="text-black mt-3 text-center text-md-left">
                         {% if search_term or current_categories or current_sorting != 'None_None' %}
                             <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
                         {% endif %}
@@ -74,19 +74,19 @@
                                         <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
                                         {% if product.category %}
                                         <p class="small mt-1 mb-1">
-                                            <a href="{% url 'products' %}?category={{ product.category.name}}" class="text-muted">
+                                            <a href="{% url 'products' %}?category={{ product.category.name}}" class="text-black">
                                                 <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
                                             </a>
                                         </p>
                                         {% endif %}
                                         {% if product.rating %}
-                                            <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }}/5</small>
+                                            <small class="text-black"><i class="fas fa-star mr-1"></i>{{ product.rating }}/5</small>
                                         {% else %}
-                                            <small class="text-muted">No Rating</small>
+                                            <small class="text-black">No Rating</small>
                                         {% endif %}
                                         <h6><a href="{% url 'rate_product' product.id %}">Rate this product</a></h6>
                                         {% if request.user.is_superuser %}
-                                            <small class="ml-3">
+                                            <small class="ml-4">
                                                 <a href="{% url 'edit_product' product.id %}">Edit</a>
                                                 <a href="{% url 'delete_product' product.id %}" class="text-danger">Delete</a>
                                             </small>
@@ -95,7 +95,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>                   
 
                     {% if forloop.counter|divisibleby:1 %}
                         <div class="col-12 d-sm-none mb-5">

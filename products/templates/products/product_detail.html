@@ -52,15 +52,15 @@
 
                 {% if product.category %}
                 <p class="small mt-1 mb-1">
-                    <a href="{% url 'products' %}?category={{ product.category.name}}" class="text-muted">
+                    <a href="{% url 'products' %}?category={{ product.category.name}}" class="text-black">
                         <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
                     </a>
                 </p>
                 {% endif %}
                 {% if product.rating %}
-                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                    <small class="text-black"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                 {% else %}
-                    <small class="text-muted">No Rating</small>
+                    <small class="text-black">No Rating</small>
                 {% endif %}
                 <form method="POST" action="{% url 'product_detail' product.id %}">
                     {% csrf_token %}
