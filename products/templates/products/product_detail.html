@@ -65,9 +65,9 @@
                 {% endif %}
                 <form method="POST" action="{% url 'product_detail' product.id %}">
                     {% csrf_token %}
-                    {{ form.as_p }}
-                    <button type="submit">Rate</button>
-                </form>
+                    {{ form|crispy}}
+                    <button type="submit" class="btn-outline-black">Rate</button>
+                </form><br>
                 <!--wishlist-->
                 <div class="col-6">
                     {% if user.is_authenticated %}
