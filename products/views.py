@@ -216,6 +216,7 @@ def like_product(request, product_id):
         'like': like,
         'liked': liked,
         'product': product,
+        'like_count': product.like_set.count(),
     }
     return render(request, 'products/product_detail.html', context)
 
