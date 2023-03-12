@@ -186,8 +186,15 @@ def add_product_to_wishlist(request, product_id):
         wishlist.products.remove(product)
     wishlist.save()
 
+    wishlist_items = []
+    if request.user.is_authenticated:
+        user_wishlist = Wishlist.objects.filter(user=request.user).first()
+        if user_wishlist:
+            wishlist_items = user_wishlist.products.all()
+
     context = {
         'product': product,
+        'wishlist_items': wishlist.products.all(),
     }
     return render(request, 'products/product_detail.html', context)
 
