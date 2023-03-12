@@ -37,7 +37,7 @@
                             {% csrf_token %}
                             {% if liked %}
                             <button type="submit" class="btn-like">
-                                <i class="fas fa-thumbs-down"></i>
+                                <i class="fas fa-thumbs-up"></i>
                             </button>
                             {% else %}
                             <button type="submit" class="btn-like">
@@ -154,13 +154,16 @@
                     <ul>
                     {% for comment in comments|slice:":3" %}
                     <li>
-                        {{ comment.text }} - {{ comment.user.username }} - {{ comment.created_at }}
+                        <h5><b>{{ comment.user.username }}</b></h5>
+                        <p>{{ comment.text }}</p>
+                        <p>{{ comment.created_at }}
                         {% if comment.user == request.user %}
                             <small class="ml-3">
                                 <a href="{% url 'edit_comment' comment.id %}">Edit</a>
                                 <a href="{% url 'delete_comment' comment.id %}" class="text-danger">Delete</a>
                             </small>
                         {% endif %}
+                        </p>
                     </li>
                     {% endfor %}
                     </ul>
