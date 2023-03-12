@@ -63,6 +63,11 @@
                 {% else %}
                     <small class="text-muted">No Rating</small>
                 {% endif %}
+                <form method="POST" action="{% url 'product_detail' product.id %}">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit">Rate</button>
+                </form>
                 <!--wishlist-->
                 <div class="col-6">
                     {% if user.is_authenticated %}

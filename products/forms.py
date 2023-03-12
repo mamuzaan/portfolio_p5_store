@@ -36,3 +36,13 @@ class CommentForm(forms.ModelForm):
                 'class': 'form-control', 'rows': 3
             })
         }
+
+
+class RatingForm(forms.Form):
+    rating = forms.DecimalField(max_digits=3, decimal_places=1)
+
+    def clean_rating(self):
+        rating = self.cleaned_data['rating']
+        if not (0 <= rating <= 5):
+            raise forms.ValidationError('Rating must be between 0 and 5.')
+        return rating

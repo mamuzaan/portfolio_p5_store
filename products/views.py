@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category, Wishlist, Like, Comment
-from .forms import ProductForm, CommentForm
+from .forms import ProductForm, CommentForm, RatingForm
 from django.http import HttpResponseRedirect
 
 
@@ -61,6 +61,17 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
     product = get_object_or_404(Product, pk=product_id)
     liked = False
+
+    if request.method == 'POST':
+        form = RatingForm(request.POST)
+        if form.is_valid():
+            rating = form.cleaned_data['rating']
+            product.rating = rating
+            product.save()
+            return redirect('product_detail', product.id)
+    else:
+        form = RatingForm()
+
     if request.user.is_authenticated:
         like, created = Like.objects.get_or_create(user=request.user)
         comments = Comment.objects.filter(product=product)
@@ -72,13 +83,29 @@ def product_detail(request, product_id):
             'product': product,
             'liked': liked,
             'comments_form': comments_form,
-            'comments': comments
+            'comments': comments,
+            'form': form,
         }
     else:
         context = {
             'product': product,
         }
     return render(request, 'products/product_detail.html', context)
+
+
+def rate_product(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+
+    if request.method == 'POST':
+        form = RatingForm(request.POST)
+        if form.is_valid():
+            product.rating = form.cleaned_data['rating']
+            product.save()
+            return redirect('product_detail', product.id)
+    else:
+        form = RatingForm()
+
+    return render(request, 'products/product_detail.html', {'product': product, 'form': form})
 
 
 @login_required
