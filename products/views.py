@@ -93,6 +93,7 @@ def product_detail(request, product_id):
     return render(request, 'products/product_detail.html', context)
 
 
+@login_required
 def rate_product(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
 
@@ -176,6 +177,7 @@ def delete_product(request, product_id):
     return redirect(reverse('products'))
 
 
+@login_required
 def add_product_to_wishlist(request, product_id):
     """ A view to show individual product details """
     product = get_object_or_404(Product, pk=product_id)

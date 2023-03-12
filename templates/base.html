@@ -88,10 +88,10 @@
           </form>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-heart"></i> Wishlist ({{ wishlist_items.count }})
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-heart text-danger"></i> Wishlist ({{ wishlist_items.count }})
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
                 {% for item in wishlist_items %}
                 <a class="dropdown-item" href="{% url 'product_detail' item.pk %}">{{ item.name }}</a>
                 {% endfor %}
