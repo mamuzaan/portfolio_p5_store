@@ -3,7 +3,9 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
-from .models import Product, Category, Wishlist, Like, Comment
+from django.db.models import Avg
+from django.core.validators import MinValueValidator, MaxValueValidator
+from .models import Product, Category, Wishlist, Like, Comment, Rating
 from .forms import ProductForm, CommentForm, RatingForm
 from django.http import HttpResponseRedirect
 
@@ -56,7 +58,7 @@ def all_products(request):
 
     return render(request, 'products/products.html', context)
 
-
+@login_required
 def product_detail(request, product_id):
     """ A view to show individual product details """
     product = get_object_or_404(Product, pk=product_id)
@@ -66,8 +68,14 @@ def product_detail(request, product_id):
         form = RatingForm(request.POST)
         if form.is_valid():
             rating = form.cleaned_data['rating']
-            product.rating = rating
-            product.save()
+            try:
+                rating_obj = Rating.objects.get(user=request.user, product=product)
+                rating_obj.rating = rating
+                rating_obj.save()
+            except Rating.DoesNotExist:
+                rating_obj = Rating.objects.create(user=request.user, product=product, rating=rating)
+
+            calculate_average_rating(request, product)
             return redirect('product_detail', product.id)
     else:
         form = RatingForm()
@@ -91,6 +99,20 @@ def product_detail(request, product_id):
             'product': product,
         }
     return render(request, 'products/product_detail.html', context)
+
+
+@login_required
+def calculate_average_rating(request, product):
+    ratings = Rating.objects.filter(product=product)
+    num_ratings = len(ratings)
+    if num_ratings > 0:
+        sum_ratings = sum([rating.rating for rating in ratings])
+        average_rating = sum_ratings / num_ratings
+        product.rating = average_rating
+        product.save()
+    else:
+        product.rating = None
+        product.save()
 
 
 @login_required

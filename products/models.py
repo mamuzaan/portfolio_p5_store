@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 class Category(models.Model):
@@ -60,3 +61,16 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"{self.user.username} - {self.product.name} - {self.created_at}"
+
+
+class Rating(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='ratings')
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    rating = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
+
+    class Meta:
+        unique_together = (('user', 'product'),)
+        index_together = (('user', 'product'),)
+
+    def __str__(self):
+        return f'{self.user} rated {self.product} with {self.rating} stars'
