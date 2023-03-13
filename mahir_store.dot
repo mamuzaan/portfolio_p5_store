@@ -1,6 +1,6 @@
 digraph model_graph {
   // Dotfile by Django-Extensions graph_models
-  // Created: 2023-03-09 18:35
+  // Created: 2023-03-13 20:05
   
 
   fontname = "Roboto"
@@ -1104,6 +1104,48 @@ digraph model_graph {
     
       </TABLE>
       >]
+  
+    products_models_Rating [label=<
+      <TABLE BGCOLOR="white" BORDER="1" CELLBORDER="0" CELLSPACING="0">
+      <TR><TD COLSPAN="2" CELLPADDING="5" ALIGN="CENTER" BGCOLOR="#1b563f">
+      <FONT FACE="Roboto" COLOR="white" POINT-SIZE="10"><B>
+      Rating
+      </B></FONT></TD></TR>
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto"><B>id</B></FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto"><B>BigAutoField</B></FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto"><B>product</B></FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto"><B>user</B></FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto"><B>ForeignKey (id)</B></FONT>
+      </TD></TR>
+    
+    
+    
+      <TR><TD ALIGN="LEFT" BORDER="0">
+      <FONT FACE="Roboto">rating</FONT>
+      </TD><TD ALIGN="LEFT">
+      <FONT FACE="Roboto">IntegerField</FONT>
+      </TD></TR>
+    
+    
+      </TABLE>
+      >]
 
   }
   subgraph cluster_checkout {
@@ -1519,6 +1561,12 @@ digraph model_graph {
 
   products_models_Comment -> products_models_Product
   [label=" product (comment)"] [arrowhead=none, arrowtail=dot, dir=both];
+
+  products_models_Rating -> products_models_Product
+  [label=" product (ratings)"] [arrowhead=none, arrowtail=dot, dir=both];
+
+  products_models_Rating -> django_contrib_auth_models_User
+  [label=" user (rating)"] [arrowhead=none, arrowtail=dot, dir=both];
 
 
   checkout_models_Order -> profiles_models_UserProfile
