@@ -59,7 +59,6 @@ def all_products(request):
     return render(request, 'products/products.html', context)
 
 
-@login_required
 def product_detail(request, product_id):
     """ A view to show individual product details """
     product = get_object_or_404(Product, pk=product_id)
